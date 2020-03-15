@@ -10,7 +10,9 @@ app.use(express.static('views'))
 
 var openController = require('./controller/api/openController')();
 var closeController = require('./controller/api/closeController')();
+var imgController = require('./controller/api/imgController')();
 var mainController = require('./controller/api/mainController')();
+
 var indexController = require('./controller/indexController')();
 
 app.use(bodyParser.urlencoded({ extended: true }));  
@@ -18,6 +20,7 @@ app.use(bodyParser.json());
 
 app.use("/api/open", openController);
 app.use("/api/close", closeController);
+app.use("/api/img", imgController);
 app.use("/api", mainController);
 app.use("/", indexController)
 

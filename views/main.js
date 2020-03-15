@@ -15,6 +15,8 @@ function garageCheck() {
         image.src = "garageclosed.png";
         image.alt = "garage is closed";
     }
+
+    document.getElementById('lastimg').src = status.url;
 }
 
 setInterval(garageCheck, 1000)
